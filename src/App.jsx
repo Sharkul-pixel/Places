@@ -132,7 +132,7 @@ function App() {
         </p>
       </header>
       <main>
-        {error && <ErrorMessage title="An error has occurred!" message={error.message}/>}
+        {error && <ErrorMessage title="An Error Has Occurred!" message={error.message}/>}
         {!error && <Places
           title="I'd like to visit ..."
           fallbackText="Select the places you would like to visit below."

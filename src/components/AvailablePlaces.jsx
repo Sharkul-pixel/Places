@@ -7,6 +7,7 @@ export default function AvailablePlaces({ onSelectPlace }) {
   const [availablePlaces, setAvailablePlaces] = useState([]); // common to use these 3 states together when fetching data
   const [isFetching, setIsFetching] = useState(false); // common to use these 3 states together when fetching data
   const [error, setError] = useState();  // common to use these 3 states together when fetching data
+  //const [isLoading, setIsLoading] = useState();
 
   useEffect(() => {
     async function fetchAvailablePlaces() {
@@ -32,7 +33,7 @@ export default function AvailablePlaces({ onSelectPlace }) {
           message:
             error.message || 'Could not fetch places!' // if error.message is undefined then fallback to custom message
         });
-        setIsLoading(false);
+        setIsFetching(false);
       } 
     }
     
